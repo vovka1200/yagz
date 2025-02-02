@@ -1,2 +1,2 @@
-# yagz
-Yet Another Go-Zabbix API package.
+# Yet Another Go-Zabbix
+Zabbix API package for Golang.
