@@ -14,4 +14,5 @@ type Params struct {
 	Active        bool     `json:"active,omitempty"`
 	MinSeverity   int      `json:"min_Severity"`
 	OnlyTrue      bool     `json:"only_true"`
+	Monitored     bool     `json:"monitored"`
 }
