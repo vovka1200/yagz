@@ -13,4 +13,5 @@ type Params struct {
 	SkipDependent bool     `json:"skipDependent,omitempty"`
 	Active        bool     `json:"active,omitempty"`
 	MinSeverity   int      `json:"min_Severity"`
+	OnlyTrue      bool     `json:"only_true"`
 }
