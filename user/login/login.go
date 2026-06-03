@@ -3,7 +3,7 @@ package login
 const Method = "user.login"
 
 type Login struct {
-	User     string `json:"user"`
+	Username string `json:"username"`
 	Password string `json:"password"`
 	UserData bool   `json:"userData,omitempty"`
 }

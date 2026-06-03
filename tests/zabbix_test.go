@@ -1,9 +1,10 @@
 package tests
 
 import (
-	zabbix "github.com/vovka1200/yagz"
 	"reflect"
 	"testing"
+
+	zabbix "github.com/vovka1200/yagz"
 )
 
 func TestNewClient(t *testing.T) {
