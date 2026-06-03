@@ -2,6 +2,7 @@ package zabbix
 
 import (
 	"context"
+
 	log "github.com/sirupsen/logrus"
 	"github.com/vovka1200/jsonrpc"
 	"github.com/vovka1200/yagz/user/login"
@@ -32,7 +33,7 @@ func (z *Zabbix) Login(username string, password string) error {
 	ctx := context.Background()
 	var user login.User
 	if err := z.Call(ctx, &user, login.Method, login.Login{
-		User:     username,
+		Username: username,
 		Password: password,
 		UserData: true,
 	}); err == nil {
