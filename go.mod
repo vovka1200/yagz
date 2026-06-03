@@ -1,10 +1,10 @@
 module github.com/vovka1200/yagz
 
-go 1.23.3
+go 1.27.5
 
 require (
-	github.com/sirupsen/logrus v1.9.3
+	github.com/sirupsen/logrus v1.9.4
 	github.com/vovka1200/jsonrpc v0.0.1
 )
 
-require golang.org/x/sys v0.30.0 // indirect
+require golang.org/x/sys v0.45.0 // indirect
