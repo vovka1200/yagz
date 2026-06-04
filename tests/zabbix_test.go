@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	zabbix "github.com/vovka1200/yagz"
+	zabbix "git.grav.su/andromeda/yagz"
 )
 
 func TestNewClient(t *testing.T) {

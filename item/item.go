@@ -1,7 +1,7 @@
 package item
 
 import (
-	"github.com/vovka1200/yagz/host"
+	"git.grav.su/andromeda/yagz/host"
 )
 
 type Item struct {

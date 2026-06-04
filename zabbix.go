@@ -3,9 +3,9 @@ package zabbix
 import (
 	"context"
 
+	"git.grav.su/andromeda/jsonrpc"
+	"git.grav.su/andromeda/yagz/user/login"
 	log "github.com/sirupsen/logrus"
-	"github.com/vovka1200/jsonrpc"
-	"github.com/vovka1200/yagz/user/login"
 )
 
 type Zabbix struct {
@@ -18,6 +18,10 @@ func NewClient(url string) Zabbix {
 	return Zabbix{
 		Client: jsonrpc.NewClientWithOpts(url, &jsonrpc.RPCClientOpts{
 			AllowUnknownFields: true,
+			DefaultRequestID:   1,
+			CustomHeaders: map[string]string{
+				"User-Agent": "yagz/0.0.1",
+			},
 		}),
 	}
 }
@@ -31,14 +35,12 @@ func NewClientWithOpts(url string, options *jsonrpc.RPCClientOpts) Zabbix {
 
 func (z *Zabbix) Login(username string, password string) error {
 	ctx := context.Background()
-	var user login.User
-	if err := z.Call(ctx, &user, login.Method, login.Login{
+	var token string
+	if err := z.Call(ctx, &token, login.Method, login.Login{
 		Username: username,
 		Password: password,
-		UserData: true,
 	}); err == nil {
-		z.User = user
-		z.Client.SetToken(z.User.SessionId)
+		z.Client.SetToken(token)
 		return nil
 	} else {
 		log.Error(err)

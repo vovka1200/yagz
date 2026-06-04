@@ -1,10 +1,16 @@
-module github.com/vovka1200/yagz
+module git.grav.su/andromeda/yagz
 
 go 1.25.7
 
 require (
+	git.grav.su/andromeda/jsonrpc v0.0.10
 	github.com/sirupsen/logrus v1.9.4
-	github.com/vovka1200/jsonrpc v0.0.1
+	github.com/stretchr/testify v1.11.1
 )
 
-require golang.org/x/sys v0.45.0 // indirect
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	golang.org/x/sys v0.45.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+)

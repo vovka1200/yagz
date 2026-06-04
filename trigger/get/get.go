@@ -1,8 +1,6 @@
 package get
 
-import (
-	"github.com/vovka1200/yagz/generic"
-)
+import "git.grav.su/andromeda/yagz/generic"
 
 const Method = "trigger.get"
 

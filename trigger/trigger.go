@@ -1,8 +1,6 @@
 package trigger
 
-import (
-	"github.com/vovka1200/yagz/host"
-)
+import "git.grav.su/andromeda/yagz/host"
 
 type Trigger struct {
 	Id          string      `json:"triggerid"`

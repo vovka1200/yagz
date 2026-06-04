@@ -1,7 +1,7 @@
 package host
 
 import (
-	"github.com/vovka1200/yagz/hostinterface"
+	"git.grav.su/andromeda/yagz/hostinterface"
 )
 
 type Host struct {

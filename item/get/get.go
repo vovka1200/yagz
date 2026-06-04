@@ -1,7 +1,7 @@
 package get
 
 import (
-	"github.com/vovka1200/yagz/generic"
+	"git.grav.su/andromeda/yagz/generic"
 )
 
 const Method = "item.get"
